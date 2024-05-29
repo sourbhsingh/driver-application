@@ -1,4 +1,6 @@
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import { routes } from './lib/routes';
 
 //Components
 import Dashboard from './layout/Dashboard/Dashboard';
@@ -11,11 +13,16 @@ function App() {
 
   return (
     <main data-theme={theme}>
-      {/* login */}
-      <Login {...loginProps} />
+      <Routes>
+        {/* login */}
+        <Route path={routes.login} element={<Login {...loginProps} />} />
 
-      {/* dashboard */}
-      <Dashboard {...dashboardProps} />
+        {/* dashboard */}
+        <Route
+          path={routes.dashboard}
+          element={<Dashboard {...dashboardProps} />}
+        />
+      </Routes>
     </main>
   );
 }
