@@ -1,0 +1,9 @@
+{
+    "theme": "coffee",
+    "loginProps": {},
+    "dashboardProps": {
+        "mainLogo": "./assets/companyLogo.png",
+        "userPicPlaceholder": "./assets/userLogoPlaceholder.png",
+        "greetingHeader": "Hi, \n"
+    }
+}
