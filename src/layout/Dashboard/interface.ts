@@ -5,8 +5,6 @@ export interface dashboardProps {
     greetingHeader: string;
   };
   cardNotificationProps: {
-    notificationTitle: string;
-    notificationMessage: string;
     notificationRedirectButton: string;
   };
 }

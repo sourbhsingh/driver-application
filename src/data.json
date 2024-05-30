@@ -20,8 +20,6 @@
             "greetingHeader": "Hi, \n"
         },
         "cardNotificationProps": {
-            "notificationTitle": "Important!",
-            "notificationMessage": "Do amet ut est minim labore anim tempor enim ullamco est.",
             "notificationRedirectButton": "Go"
         }
     }
