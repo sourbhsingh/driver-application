@@ -4,7 +4,7 @@ function Navbar(props: navbarProps) {
   const { greetingHeader, userPicPlaceholder } = props;
   return (
     <nav className='flex justify-between items-center'>
-      <p className='text-2xl lg:text-4xl'>{`${greetingHeader} Esteban`}</p>
+      <p className='text-4xl lg:text-4xl'>{`${greetingHeader} Esteban`}</p>
       <div className='dropdown dropdown-end'>
         <div tabIndex={0} role='button' className='btn m-1 btn-circle'>
           <img
