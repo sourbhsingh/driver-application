@@ -10,6 +10,11 @@ const DUMMY_DATA = [
     notificationMessage: 'Nisi sint ea eiusmod ex.',
   },
   {
+    notificationId: 3,
+    notificationTitle: 'Important',
+    notificationMessage: 'Nisi sint ea eiusmod ex.',
+  },
+  {
     notificationId: 2,
     notificationTitle: 'Important',
     notificationMessage: 'Nisi sint ea eiusmod ex.',
@@ -23,7 +28,8 @@ function Dashboard(props: dashboardProps) {
       <Navbar {...navbarProps} />
 
       {/* Notifications section */}
-      <section className='flex justify-center'>
+      <section className='flex flex-col justify-center items-center  w-full'>
+        <h2 className='self-start'>Important Notifications</h2>
         <CardCarousel>
           {DUMMY_DATA.map(
             ({ notificationId, notificationMessage, notificationTitle }) => (
