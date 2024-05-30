@@ -14,8 +14,10 @@
         "loginShowPasswordAltText": "Show Password"
     },
     "dashboardProps": {
-        "mainLogo": "./assets/companyLogo.png",
-        "userPicPlaceholder": "./assets/userLogoPlaceholder.png",
-        "greetingHeader": "Hi, \n"
+        "navbarProps": {
+            "userPicPlaceholder": "/src/assets/userLogoPlaceholder.png",
+            "mainLogo": "/src/assets/companyLogo.png",
+            "greetingHeader": "Hi, \n"
+        }
     }
 }

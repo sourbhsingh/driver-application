@@ -1,11 +1,11 @@
+import Navbar from './components/Navbar/Navbar';
 import { dashboardProps } from './interface';
 
 function Dashboard(props: dashboardProps) {
-  const { greetingHeader } = props;
+  const { navbarProps } = props;
   return (
-    <section className='mt-6'>
-      <h1>Dasboard</h1>
-      <p>{greetingHeader}</p>
+    <section className='m-10'>
+      <Navbar {...navbarProps} />
     </section>
   );
 }
