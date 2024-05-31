@@ -1,5 +1,5 @@
 {
-    "theme": "coffee",
+    "theme": "cupcake",
     "loginProps": {
         "loginLogo": "/src/assets/companyLogo.png",
         "loginLogoAltText": "My Courier Image",
@@ -14,6 +14,7 @@
         "loginShowPasswordAltText": "Show Password"
     },
     "dashboardProps": {
+        "importantNotificationsTitle": "Important Notifications",
         "navbarProps": {
             "userPicPlaceholder": "/src/assets/userLogoPlaceholder.png",
             "mainLogo": "/src/assets/companyLogo.png",
@@ -21,6 +22,9 @@
         },
         "cardNotificationProps": {
             "notificationRedirectButton": "Go"
+        },
+        "performanceScoreProps": {
+            "mainTitle": "Performance Score"
         }
     }
 }

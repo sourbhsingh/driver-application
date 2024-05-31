@@ -1,4 +1,5 @@
 export interface dashboardProps {
+  importantNotificationsTitle: string;
   navbarProps: {
     mainLogo: string;
     userPicPlaceholder: string;
@@ -6,5 +7,9 @@ export interface dashboardProps {
   };
   cardNotificationProps: {
     notificationRedirectButton: string;
+  };
+
+  performanceScoreProps: {
+    mainTitle: string;
   };
 }

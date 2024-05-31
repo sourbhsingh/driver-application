@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   return (
-    <main>
+    <main data-theme={theme}>
       <Routes>
         {/* login */}
         <Route path={routes.login} element={<Login {...loginProps} />} />

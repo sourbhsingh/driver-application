@@ -1,3 +1,5 @@
+import Card from '../../UI/Card/Card';
+import PerformanceIndicator from './PerformanceIndicator/PerformanceIndicator';
 import CardCarousel from './components/CardCarousel/CardCarousel';
 import CardNotification from './components/CardNotification/CardNotification';
 import Navbar from './components/Navbar/Navbar';
@@ -21,7 +23,12 @@ const DUMMY_DATA = [
   },
 ];
 function Dashboard(props: dashboardProps) {
-  const { navbarProps, cardNotificationProps } = props;
+  const {
+    navbarProps,
+    cardNotificationProps,
+    importantNotificationsTitle,
+    performanceScoreProps,
+  } = props;
 
   const areNotificationsAvailable = DUMMY_DATA.length !== 0;
   return (
@@ -32,7 +39,7 @@ function Dashboard(props: dashboardProps) {
       {areNotificationsAvailable && (
         <section className='flex flex-col justify-center items-center  w-full'>
           <h2 className='self-start text-2xl pb-2 pt-2'>
-            Important Notifications
+            {importantNotificationsTitle}
           </h2>
           <CardCarousel>
             {DUMMY_DATA.map(
@@ -48,6 +55,16 @@ function Dashboard(props: dashboardProps) {
           </CardCarousel>
         </section>
       )}
+
+      {/* Performance Indicators section */}
+      {/* <section className='flex flex-col justify-center items-center  w-full bg-black'>
+        <PerformanceIndicator />
+      </section> */}
+      <section className='flex justify-center mt-7'>
+        <Card title={performanceScoreProps.mainTitle} isGlassy>
+          <PerformanceIndicator />
+        </Card>
+      </section>
     </section>
   );
 }
