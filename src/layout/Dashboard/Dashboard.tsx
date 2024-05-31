@@ -32,7 +32,7 @@ function Dashboard(props: dashboardProps) {
 
   const areNotificationsAvailable = DUMMY_DATA.length !== 0;
   return (
-    <section className='m-10'>
+    <section className=''>
       <Navbar {...navbarProps} />
 
       {/* Notifications section */}
@@ -60,9 +60,13 @@ function Dashboard(props: dashboardProps) {
       {/* <section className='flex flex-col justify-center items-center  w-full bg-black'>
         <PerformanceIndicator />
       </section> */}
-      <section className='flex justify-center mt-7'>
-        <Card title={performanceScoreProps.mainTitle} isGlassy>
-          <PerformanceIndicator />
+      <section className='flex justify-center mt-7 w-11/12 mx-auto'>
+        <Card
+          title={performanceScoreProps.mainTitle}
+          className='glass'
+          isCentered
+        >
+          <PerformanceIndicator className='color-red-500' />
         </Card>
       </section>
     </section>
