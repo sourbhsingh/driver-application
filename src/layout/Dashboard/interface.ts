@@ -1,5 +1,10 @@
 export interface dashboardProps {
-  mainLogo: string;
-  userPicPlaceholder: string;
-  greetingHeader: string;
+  navbarProps: {
+    mainLogo: string;
+    userPicPlaceholder: string;
+    greetingHeader: string;
+  };
+  cardNotificationProps: {
+    notificationRedirectButton: string;
+  };
 }

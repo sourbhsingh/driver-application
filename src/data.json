@@ -1,12 +1,12 @@
 {
     "theme": "coffee",
     "loginProps": {
-        "loginLogo": "src/assets/companyLogo.png",
+        "loginLogo": "/src/assets/companyLogo.png",
         "loginLogoAltText": "My Courier Image",
         "loginHeader": "Sign into DPI Driver",
         "loginSlogan": "Performance Insights for Superior Service",
-        "loginEyeIconOn": "src/assets/eyeIconOn.svg",
-        "loginEyeIconOff": "src/assets/eyeIconOff.svg",
+        "loginEyeIconOn": "/src/assets/eyeIconOn.svg",
+        "loginEyeIconOff": "/src/assets/eyeIconOff.svg",
         "loginUsernamePlaceholder": "Email or username",
         "loginPasswordPlaceholder": "Password",
         "loginButtonText": "Login",
@@ -14,8 +14,13 @@
         "loginShowPasswordAltText": "Show Password"
     },
     "dashboardProps": {
-        "mainLogo": "./assets/companyLogo.png",
-        "userPicPlaceholder": "./assets/userLogoPlaceholder.png",
-        "greetingHeader": "Hi, \n"
+        "navbarProps": {
+            "userPicPlaceholder": "/src/assets/userLogoPlaceholder.png",
+            "mainLogo": "/src/assets/companyLogo.png",
+            "greetingHeader": "Hi, \n"
+        },
+        "cardNotificationProps": {
+            "notificationRedirectButton": "Go"
+        }
     }
 }

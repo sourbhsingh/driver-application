@@ -12,6 +12,7 @@ import dataProps from './data.json';
 function App() {
   const { dashboardProps, loginProps, theme } = dataProps;
 
+  // TODO: Review if this is necessary
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
   }, []);
@@ -23,9 +24,9 @@ function App() {
         <Route path={routes.login} element={<Login {...loginProps} />} />
 
         {/* dashboard */}
-        <Route 
-          path={routes.dashboard} 
-          element={<Dashboard {...dashboardProps} />} 
+        <Route
+          path={routes.dashboard}
+          element={<Dashboard {...dashboardProps} />}
         />
       </Routes>
     </main>
