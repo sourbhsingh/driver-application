@@ -60,7 +60,7 @@ function Dashboard(props: dashboardProps) {
       {/* <section className='flex flex-col justify-center items-center  w-full bg-black'>
         <PerformanceIndicator />
       </section> */}
-      <section className='flex justify-center mt-7 w-11/12 mx-auto'>
+      <section className='flex justify-center mt-7 w-full mx-auto'>
         <Card
           title={performanceScoreProps.mainTitle}
           className='glass'
