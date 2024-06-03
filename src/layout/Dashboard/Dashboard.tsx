@@ -66,7 +66,10 @@ function Dashboard(props: dashboardProps) {
           className='glass'
           isCentered
         >
-          <PerformanceIndicator className='color-red-500' />
+          <PerformanceIndicator
+            className='color-red-500'
+            progressScore={'50'}
+          />
         </Card>
       </section>
     </section>
