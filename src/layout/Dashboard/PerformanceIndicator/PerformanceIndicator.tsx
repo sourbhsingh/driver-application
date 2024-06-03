@@ -30,9 +30,9 @@ function PerformanceIndicator(props: PerformanceIndicatorProps) {
   return (
     <div
       className={`radial-progress ${className}`}
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      //@ts-ignore
       style={{
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        //@ts-ignore
         '--value': progressScore,
         '--size': '12rem',
         '--thickness': '2rem',

@@ -24,7 +24,14 @@
             "notificationRedirectButton": "Go"
         },
         "performanceScoreProps": {
-            "mainTitle": "Performance Score"
+            "mainTitle": "Performance Score",
+            "performanceGradingTreshold": {
+                "excellent": 100,
+                "veryGood": 85,
+                "good": 70,
+                "needsImprovement": 50,
+                "poor": 30
+            }
         }
     }
 }

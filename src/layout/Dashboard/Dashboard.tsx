@@ -57,18 +57,13 @@ function Dashboard(props: dashboardProps) {
       )}
 
       {/* Performance Indicators section */}
-      {/* <section className='flex flex-col justify-center items-center  w-full bg-black'>
-        <PerformanceIndicator />
-      </section> */}
-      <section className='flex justify-center mt-7 w-full mx-auto'>
-        <Card
-          title={performanceScoreProps.mainTitle}
-          className='glass'
-          isCentered
-        >
+      <section className='flex justify-center mt-7 w-full mx-auto items-center text-center'>
+        <Card className='glass bg-red-700' isCentered>
+          <h2 className='text-3xl mb-7'>Performance Indicator</h2>
           <PerformanceIndicator
-            className='color-red-500'
-            progressScore={'50'}
+            className='color-red-500 text-center m-auto progress-primary bg-blue-500'
+            progressScore={85}
+            {...performanceScoreProps}
           />
         </Card>
       </section>
