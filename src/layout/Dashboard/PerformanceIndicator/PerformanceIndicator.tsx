@@ -1,46 +1,23 @@
-import { PerformanceIndicatorProps } from './Interface';
-
-/**
- * PerformanceIndicator component.
- *
- * This component renders a radial progress indicator with a given progress score.
- *
- * @param {PerformanceIndicatorProps} props - The properties for the component.
- * @param {string} props.className - Additional class name(s) to apply to the component.
- * @param {number} props.progressScore - The progress score to display, which sets the value of the radial progress.
- *
- * @returns {JSX.Element} The rendered radial progress indicator.
- *
- * @example
- * // Usage example:
- * import React from 'react';
- * import PerformanceIndicator from './PerformanceIndicator';
- *
- * const App = () => (
- *   <div>
- *     <PerformanceIndicator className="custom-class" progressScore={75} />
- *   </div>
- * );
- *
- * export default App;
- */
+import { PerformanceIndicatorProps } from './interface';
+import Card from '../../../UI/Card/Card';
+import RadialProgress from '../../../UI/RadialProgress/RadialProgress';
 
 function PerformanceIndicator(props: PerformanceIndicatorProps) {
-  const { className, progressScore } = props;
+  const { mainTitle, progressScore = 50, performanceGradingTreshold } = props;
+
+  let colorClueIndicator = '';
+
+  if (performanceGradingTreshold) colorClueIndicator = 'bg-lima-500';
   return (
-    <div
-      className={`radial-progress ${className}`}
-      style={{
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        //@ts-ignore
-        '--value': progressScore,
-        '--size': '12rem',
-        '--thickness': '2rem',
-      }}
-      role='progressbar'
-    >
-      {progressScore}%
-    </div>
+    <section className='flex justify-center mt-7 w-full mx-auto items-center text-center'>
+      <Card className='glass bg-red-700' isCentered>
+        <h2 className='text-3xl mb-7'>{mainTitle}</h2>
+        <RadialProgress
+          className='color-red-500 text-center m-auto progress-primary bg-blue-500'
+          progressScore={progressScore}
+        />
+      </Card>
+    </section>
   );
 }
 

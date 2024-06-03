@@ -1,4 +1,3 @@
-import Card from '../../UI/Card/Card';
 import PerformanceIndicator from './PerformanceIndicator/PerformanceIndicator';
 import CardCarousel from './components/CardCarousel/CardCarousel';
 import CardNotification from './components/CardNotification/CardNotification';
@@ -57,16 +56,7 @@ function Dashboard(props: dashboardProps) {
       )}
 
       {/* Performance Indicators section */}
-      <section className='flex justify-center mt-7 w-full mx-auto items-center text-center'>
-        <Card className='glass bg-red-700' isCentered>
-          <h2 className='text-3xl mb-7'>Performance Indicator</h2>
-          <PerformanceIndicator
-            className='color-red-500 text-center m-auto progress-primary bg-blue-500'
-            progressScore={85}
-            {...performanceScoreProps}
-          />
-        </Card>
-      </section>
+      <PerformanceIndicator {...performanceScoreProps} progressScore={73} />
     </section>
   );
 }

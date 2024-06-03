@@ -1,4 +1,11 @@
 export interface PerformanceIndicatorProps {
-  className: string;
-  progressScore: string;
+  mainTitle: string;
+  progressScore: number;
+  performanceGradingTreshold: {
+    excellent: number;
+    veryGood: number;
+    good: number;
+    needsImprovement: number;
+    poor: number;
+  };
 }

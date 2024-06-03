@@ -11,6 +11,7 @@ export interface dashboardProps {
 
   performanceScoreProps: {
     mainTitle: string;
+    progressScore: number;
     performanceGradingTreshold: {
       excellent: number;
       veryGood: number;
