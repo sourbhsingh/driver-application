@@ -1,11 +1,16 @@
+interface PerformanceGrading {
+  threshold: number;
+  title: string;
+  message: string;
+}
 export interface PerformanceIndicatorProps {
   mainTitle: string;
   progressScore: number;
-  performanceGradingTreshold: {
-    excellent: number;
-    veryGood: number;
-    good: number;
-    needsImprovement: number;
-    poor: number;
+  performanceGrading: {
+    excellent: PerformanceGrading;
+    veryGood: PerformanceGrading;
+    good: PerformanceGrading;
+    needsImprovement: PerformanceGrading;
+    poor: PerformanceGrading;
   };
 }

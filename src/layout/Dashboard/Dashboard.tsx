@@ -56,7 +56,7 @@ function Dashboard(props: dashboardProps) {
       )}
 
       {/* Performance Indicators section */}
-      <PerformanceIndicator {...performanceScoreProps} progressScore={73} />
+      <PerformanceIndicator {...performanceScoreProps} progressScore={100} />
     </section>
   );
 }
