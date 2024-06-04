@@ -12,6 +12,16 @@ import RadialProgress from '../../../UI/RadialProgress/RadialProgress';
  * @returns {JSX.Element} The rendered PerformanceIndicator component.
  **/
 
+// colors.ts
+enum PerformanceColors {
+  Excellent = 'bg-lime-500',
+  VeryGood = 'bg-lime-300',
+  Good = 'bg-amber-400',
+  NeedsImprovement = 'bg-orange-400',
+  Poor = 'bg-red-500',
+  Critical = 'bg-red-700',
+}
+
 function PerformanceIndicator(props: PerformanceIndicatorProps) {
   const { mainTitle, progressScore = 50, performanceGrading } = props;
 
@@ -20,27 +30,27 @@ function PerformanceIndicator(props: PerformanceIndicatorProps) {
   let message = '';
 
   if (progressScore === performanceGrading.excellent.threshold) {
-    colorClueIndicator = 'bg-lime-500';
+    colorClueIndicator = PerformanceColors.Excellent;
     title = performanceGrading.excellent.title;
     message = performanceGrading.excellent.message;
   } else if (progressScore >= performanceGrading.veryGood.threshold) {
-    colorClueIndicator = 'bg-lime-300';
+    colorClueIndicator = PerformanceColors.VeryGood;
     title = performanceGrading.veryGood.title;
     message = performanceGrading.veryGood.message;
   } else if (progressScore >= performanceGrading.good.threshold) {
-    colorClueIndicator = 'bg-amber-400';
+    colorClueIndicator = PerformanceColors.Good;
     title = performanceGrading.good.title;
     message = performanceGrading.good.message;
   } else if (progressScore >= performanceGrading.needsImprovement.threshold) {
-    colorClueIndicator = 'bg-orange-400';
+    colorClueIndicator = PerformanceColors.NeedsImprovement;
     title = performanceGrading.needsImprovement.title;
     message = performanceGrading.needsImprovement.message;
   } else if (progressScore >= performanceGrading.poor.threshold) {
-    colorClueIndicator = 'bg-red-500';
+    colorClueIndicator = PerformanceColors.Poor;
     title = performanceGrading.poor.title;
     message = performanceGrading.poor.message;
   } else {
-    colorClueIndicator = 'bg-red-700';
+    colorClueIndicator = PerformanceColors.Critical;
     title = 'Critical';
     message = 'Performance is critical low';
   }
