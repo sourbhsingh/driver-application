@@ -2,6 +2,16 @@ import { PerformanceIndicatorProps } from './interface';
 import Card from '../../../UI/Card/Card';
 import RadialProgress from '../../../UI/RadialProgress/RadialProgress';
 
+/**
+ * PerformanceIndicator component to display a performance score with
+ * associated messages and a radial progress indicator.
+ *
+ * @param {PerformanceIndicatorProps} props - The properties object.
+ * @param {string} props.mainTitle - The main title displayed above the indicator.
+ * @param {number} [props.progressScore=50] - The performance score, defaults to 50.
+ * @returns {JSX.Element} The rendered PerformanceIndicator component.
+ **/
+
 function PerformanceIndicator(props: PerformanceIndicatorProps) {
   const { mainTitle, progressScore = 50, performanceGrading } = props;
 
