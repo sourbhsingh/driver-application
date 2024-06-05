@@ -1,5 +1,33 @@
 import { CardNotificationProps } from './Interface';
-
+/**
+ * CardNotification component.
+ *
+ * This component renders a notification card with a title, message, and a redirect button.
+ *
+ * @param {CardNotificationProps} props - The properties for the component.
+ * @param {string} props.notificationTitle - The title of the notification.
+ * @param {string} props.notificationMessage - The message content of the notification.
+ * @param {string} props.notificationRedirectButton - The label for the redirect button.
+ *
+ * @returns {JSX.Element} The rendered notification card.
+ *
+ * @example
+ * // Usage example:
+ * import React from 'react';
+ * import CardNotification from './CardNotification';
+ *
+ * const App = () => (
+ *   <div>
+ *     <CardNotification
+ *       notificationTitle="Update Available"
+ *       notificationMessage="A new update is available for download."
+ *       notificationRedirectButton="Download Now"
+ *     />
+ *   </div>
+ * );
+ *
+ * export default App;
+ */
 function CardNotification(props: CardNotificationProps) {
   const { notificationTitle, notificationMessage, notificationRedirectButton } =
     props;

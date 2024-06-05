@@ -1,6 +1,31 @@
 import React from 'react';
 import { CardCarouselInterface } from './Interface';
 
+/**
+ * CardCarousel component.
+ *
+ * This component renders a horizontally scrollable carousel containing child elements.
+ *
+ * @param {CardCarouselInterface} props - The properties for the component.
+ * @param {React.ReactNode} props.children - The child elements to display in the carousel.
+ *
+ * @returns {JSX.Element} The rendered carousel component.
+ *
+ * @example
+ * // Usage example:
+ * import React from 'react';
+ * import CardCarousel from './CardCarousel';
+ *
+ * const App = () => (
+ *   <CardCarousel>
+ *     <div className="card">Card 1</div>
+ *     <div className="card">Card 2</div>
+ *     <div className="card">Card 3</div>
+ *   </CardCarousel>
+ * );
+ *
+ * export default App;
+ */
 export default function CardCarousel(props: CardCarouselInterface) {
   const { children } = props;
 
