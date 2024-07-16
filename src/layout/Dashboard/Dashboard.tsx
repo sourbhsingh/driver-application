@@ -1,62 +1,59 @@
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PerformanceIndicator from './PerformanceIndicator/PerformanceIndicator';
 import CardCarousel from './components/CardCarousel/CardCarousel';
 import CardNotification from './components/CardNotification/CardNotification';
 import Navbar from './components/Navbar/Navbar';
-import { dashboardProps } from './interface';
+import { DashboardProps } from './interface';
+import TrainingCard from './components/CardCarousel/TrainingCard'; // Import TrainingCard
 
-const DUMMY_DATA = [
-  {
-    notificationId: 1,
-    notificationTitle: 'Important',
-    notificationMessage: 'Nisi sint ea eiusmod ex.',
-  },
-  {
-    notificationId: 3,
-    notificationTitle: 'Important',
-    notificationMessage: 'Nisi sint ea eiusmod ex.',
-  },
-  {
-    notificationId: 2,
-    notificationTitle: 'Important',
-    notificationMessage: 'Nisi sint ea eiusmod ex.',
-  },
-];
-function Dashboard(props: dashboardProps) {
-  const {
-    navbarProps,
-    cardNotificationProps,
-    importantNotificationsTitle,
-    performanceScoreProps,
-  } = props;
 
-  const areNotificationsAvailable = DUMMY_DATA.length !== 0;
+function Dashboard(props: DashboardProps) {
+  const { navbarProps, cardNotificationProps, importantNotificationsTitle, performanceScoreProps } = props;
+  const [notifications, setNotifications] = useState<any[]>([]);
+  const [performanceThreshold, setPerformanceThreshold] = useState<number>(0);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Retrieve logged-in user data from localStorage
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    if (loggedInUser) {
+      const user = JSON.parse(loggedInUser);
+
+      // Set notifications and performance threshold based on logged-in user
+      setNotifications(user.notifications);
+      setPerformanceThreshold(user.performanceThreshold);
+    } else {
+      navigate('/login'); // Redirect to login if user not authenticated
+    }
+  }, [navigate]);
+
   return (
-    <section className=''>
+    <section>
       <Navbar {...navbarProps} />
 
       {/* Notifications section */}
-      {areNotificationsAvailable && (
-        <section className='flex flex-col justify-center items-center  w-full'>
-          <h2 className='self-start text-2xl pb-2 pt-2'>
-            {importantNotificationsTitle}
-          </h2>
+      {notifications.length > 0 && (
+        <section className="flex flex-col justify-center items-center w-full">
+          <h2 className="self-start text-2xl pb-2 pt-2">{importantNotificationsTitle}</h2>
           <CardCarousel>
-            {DUMMY_DATA.map(
-              ({ notificationId, notificationMessage, notificationTitle }) => (
-                <CardNotification
-                  key={notificationId}
-                  notificationTitle={notificationTitle}
-                  notificationMessage={notificationMessage}
-                  {...cardNotificationProps}
-                />
-              )
-            )}
+            {notifications.map((notification, index) => (
+              <CardNotification
+                key={index + 1}
+                notificationTitle={notification.title}
+                notificationMessage={notification.message}
+                {...cardNotificationProps}
+              />
+            ))}
           </CardCarousel>
         </section>
       )}
 
       {/* Performance Indicators section */}
-      <PerformanceIndicator {...performanceScoreProps} progressScore={100} />
+      <PerformanceIndicator {...performanceScoreProps} progressScore={performanceThreshold} />
+      <section className="mt-8">
+        <TrainingCard />
+      </section>
     </section>
   );
 }

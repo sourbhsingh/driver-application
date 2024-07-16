@@ -1,0 +1,29 @@
+.course-card {
+    background-color: #1e1e2d;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    width: 240px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .course-card h3 {
+    margin: 20px 0 10px;
+  }
+  
+  .course-card p {
+    color: #aaa;
+  }
+  
+  .course-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .course-card .ant-btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  

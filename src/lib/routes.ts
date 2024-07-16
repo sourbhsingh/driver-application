@@ -1,5 +1,9 @@
+// routes.ts
+
 export const routes = {
   login: '/',
   dashboard: '/dashboard',
-  // home: '/home',
+  register: '/register', // Add register route
+  // Add more routes as needed
+  training:'/training'
 };

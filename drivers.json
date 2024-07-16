@@ -1,0 +1,145 @@
+[
+    {
+      "username": "JohnSmith",
+      "password": "123456",
+      "performanceThreshold": 75,
+      "notifications": [
+        {
+          "title": "Delivery Successful",
+          "message": "Your delivery to [Recipient Name] at [Delivery Address] has been successfully completed."
+        },
+        {
+          "title": "Package Pickup",
+          "message": "Please pick up package from [Pickup Address] for delivery."
+        },
+        {
+          "title": "Route Change",
+          "message": "Route for today has been updated. Please check your assigned routes."
+        }
+      ]
+    },
+    {
+      "username": "JaneDoe",
+      "password": "abcdef",
+      "performanceThreshold": 80,
+      "notifications": [
+        {
+          "title": "Delivery Delayed",
+          "message": "Your delivery to [Recipient Name] at [Delivery Address] has been delayed. Please inform the recipient."
+        },
+        {
+          "title": "Feedback Received",
+          "message": "A customer feedback has been received for your recent delivery. Please review and take necessary actions."
+        }
+      ]
+    },
+    {
+      "username": "AaravKumar",
+      "password": "aarav@123",
+      "performanceThreshold": 70,
+      "notifications": [
+        {
+          "title": "New Order",
+          "message": "A new order has been placed. Please prepare for delivery."
+        },
+        {
+          "title": "Package Ready for Pickup",
+          "message": "Package is ready for pickup at [Pickup Location]."
+        },
+        {
+          "title": "Delivery Scheduled",
+          "message": "Delivery to [Recipient Name] scheduled for tomorrow."
+        },
+        {
+          "title": "Route Update",
+          "message": "Route plan for today has been updated."
+        },
+        {
+          "title": "Payment Received",
+          "message": "Payment received for delivery service."
+        }
+      ]
+    },
+    {
+      "username": "AnanyaGupta",
+      "password": "ananya#789",
+      "performanceThreshold": 85,
+      "notifications": [
+        {
+          "title": "Delivery Confirmation",
+          "message": "Confirmation received for delivery to [Recipient Name]."
+        },
+        {
+          "title": "Delivery Rescheduled",
+          "message": "Delivery rescheduled due to weather conditions."
+        },
+        {
+          "title": "Feedback Request",
+          "message": "Please provide feedback on your recent delivery experience."
+        },
+        {
+          "title": "Route Change",
+          "message": "Route plan for today has been updated."
+        },
+        {
+          "title": "Package Delivered",
+          "message": "Your package has been successfully delivered to [Recipient Name] at [Delivery Address]."
+        }
+      ]
+    },
+    {
+      "username": "RahulSharma",
+      "password": "rahul$567",
+      "performanceThreshold": 78,
+      "notifications": [
+        {
+          "title": "Package Out for Delivery",
+          "message": "Your package is out for delivery to [Recipient Name]."
+        },
+        {
+          "title": "Delivery Attempted",
+          "message": "Delivery attempted but recipient not available."
+        },
+        {
+          "title": "Delivery Reminder",
+          "message": "Reminder: Your delivery is scheduled for today."
+        },
+        {
+          "title": "Route Update",
+          "message": "Route plan for today has been updated."
+        },
+        {
+          "title": "Delivery Successful",
+          "message": "Your delivery to [Recipient Name] at [Delivery Address] has been successfully completed."
+        }
+      ]
+    },
+    {
+      "username": "PriyaPatel",
+      "password": "priya*789",
+      "performanceThreshold": 82,
+      "notifications": [
+        {
+          "title": "Package Received",
+          "message": "Package received at [Recipient Address]."
+        },
+        {
+          "title": "Package Ready for Pickup",
+          "message": "Package ready for pickup from [Pickup Location]."
+        },
+        {
+          "title": "Delivery Delayed",
+          "message": "Your delivery has been delayed. New delivery time: [New Time]."
+        },
+        {
+          "title": "Feedback Received",
+          "message": "Feedback received from recipient regarding delivery."
+        },
+        {
+          "title": "Route Change",
+          "message": "Route plan for today has been updated."
+        }
+      ]
+    }
+  ]
+  

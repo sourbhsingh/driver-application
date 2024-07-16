@@ -1,4 +1,3 @@
-import React from 'react';
 import { DesktopNavigationProps } from './Interface';
 
 function DesktopNavigation({ className }: DesktopNavigationProps) {
